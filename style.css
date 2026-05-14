@@ -788,8 +788,9 @@ header .container2 {
     .main{
         height: auto;
         min-height: 100vh;
-        padding-top: 140px;
+        padding-top: 180px;
         background-attachment: scroll;
+        background-position: left center;
     }
 
     .main .content h2{
