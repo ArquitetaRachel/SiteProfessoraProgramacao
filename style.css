@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ==============================
+   PALETA DE CORES
+   ============================== */
+/* 
+Amarelo claro: #FFDE59
+Amarelo escuro: #FFBD59
+Azul claro: #91C2F2
+Vermelho: #E10032
+Preto escuro: #1B1A1A
+*/
+
+/* ==============================
+   ESTILOS GERAIS
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    line-height: 1.6;
+    background-color: #91C2F2;
+}
+
+.container2 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1B1A1A;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #1B1A1A;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+}
+/* ==============================
+   Main
+   ============================== */
+section{
+    padding: 100px 200px;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(Image/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main .content{
+    max-width: 800px;
+}
+
+.main .content h2{
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.main .content h2 span{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.animated-text{
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+.animated-text h3{
+    color: #E10032;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+
+.animated-text h3:nth-child(1){
+    animation: text-move 6s infinite ease-out;
+}
+
+@keyframes text-move {
+    0%,10%{
+        margin-top: 0px;
+    }
+    
+    20%,30%{
+        margin-top: -70px;
+    }
+    
+    40%,50%{
+        margin-top: -140px;
+    }
+
+    60%,70%{
+        margin-top: -210px;
+    }
+
+    75%,80%{
+        margin-top: -140px;
+    }
+    
+    85%,90%{
+        margin-top: -70px;
+    }
+    
+    100%{
+        margin-top: 0px;
+    }
+}
+
+.btn{
+    color: white;
+    background-color: #91C2F2;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin-top: 30px;
+    transition: 0.5s ease;
+}
+
+.btn:hover{
+    background-color: #91C2F2;
+    color: #1B1A1A;
+}
+
+.media-icons{
+    margin-top: 50px;
+}
+
+.media-icons a{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-right: 30px;
+}
+
+/* Sobre */
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-title{
+    position: relative;
+    color: #E10032;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.section-title::before{
+    content: "";
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    width: 140px;
+    height: 4px;
+    background-color: #E10032;
+    transform: translateX(-50%);
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #E10032;
+    transform: translateX(-50%);
+}
+
+.about .content{
+    background-color: #91C2F2;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about .content .col-left{
+    position: relative;
+    width: 45%;
+}
+
+.about .content .col-right{
+    position: relative;
+    width: 50%;
+}
+
+.about .content .col-left .img-card{
+    position: relative;
+    width: 95%;
+    min-height: 450px;
+}
+
+.about .content .col-left .img-card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .content .col-right .content-title{
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about .content .col-right .paragraph-text{
+    font-size: 1em;
+}
+
+/* ==============================
+   CABEÇALHO E MENU
+   ============================== */
+header {
+    background-color: #1B1A1A;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFDE59;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFBD59;
+}
+
+/* ==============================
+   HOME
+   ============================== */
+.hero {
+    background: linear-gradient(135deg, #FFDE59, #FFBD59);
+    padding: 8rem 0 5rem 0;
+    text-align: center;
+    color: #1B1A1A;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #E10032;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+/* ==============================
+   FAQ 
+   ============================== */
+.faq {
+    background-color: #1B1A1A;
+    padding: 5rem 0;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #FFDE59;
+    font-size: 2rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    background-color: #FFDE59;
+    color: #1B1A1A;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #FFBD59;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+}
+
+.faq-answer p {
+    padding: 1rem 0;
+    color: #333;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 1rem;
+}
+/* ==============================
+   POR QUE PROGRAMAR 
+   ============================== */
+.why-code {
+    background-color: #EAF4FF;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.why-code h2 {
+    color: #E10032;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.why-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 👉 Agora são 3 cards por linha */
+    gap: 2rem;
+    justify-items: center;
+}
+
+.why-card {
+    background-color: #91C2F2;
+    color: #1B1A1A;
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.why-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.why-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #1B1A1A;
+}
+
+.why-card p {
+    font-size: 1rem;
+    color: #222;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .why-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ==============================
+   JOGOS DOS ALUNOS (VÍDEOS)
+   ============================== */
+.student-videos {
+    background-color: #FFBD59;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.student-videos h2 {
+    color: #1B1A1A;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.student-videos p {
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    color: #1B1A1A;
+    font-size: 1.1rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 360px;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-placeholder {
+    background-color: #91C2F2;
+    color: #1B1A1A;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.video-placeholder video{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.video-card:hover video{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.video-card h3 {
+    font-size: 1.2rem;
+    color: #1B1A1A;
+    margin-bottom: 0.5rem;
+}
+
+.video-card p {
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .video-placeholder {
+        height: 180px;
+    }
+}
+/* ==============================
+   CURSOS 
+   ============================== */
+.courses {
+    background-color: #91C2F2;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.courses h2 {
+    color: #E10032;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.courses p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os cards */
+    gap: 2rem;
+    align-items: start; /* Cada card mantém sua própria altura */
+
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 340px; /* Mantém os tamanhos uniformes */
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 1.5rem;
+}
+
+.course-info h3 {
+    color: #1B1A1A;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.toggle-btn {
+    background-color: #E10032;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #1B1A1A;
+}
+
+.course-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    text-align: left;
+    padding-top: 0;
+}
+
+.course-details p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0.3rem 0;
+}
+
+.course-card.active .course-details {
+    max-height: 400px;
+    opacity: 1;
+    padding-top: 1rem;
+}
+/*   contato  */
+#contato{
+    text-align: center;
+}
+
+.contact h2{
+    color: #1B1A1A;
+    font-size: 1.5rem
+}
+
+.contact p{
+    color: #1B1A1A;
+    font-size: 1.5rem
+}
+/*   footer  */
+
+.footer{
+    background: #E10032;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .footer p{
+    font-size: 16px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+/* ==============================
+   DEPOIMENTOS (VERSÃO COM PRINTS)
+   ============================== */
+.testimonials {
+    background-color: #f8f8f8;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #E10032;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    color: #1B1A1A;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-img img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    height: 420px; /* Altura padrão dos prints */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Placeholder temporário */
+.img-placeholder {
+    background-color: #91C2F2;
+    color: #1B1A1A;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 10px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-info {
+    margin-top: 1rem;
+}
+
+.testimonial-info h3 {
+    color: #1B1A1A;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-info p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   RESPONSIVIDADE MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    /* GERAL */
+    section{
+        padding: 80px 20px;
+    }
+
+    .container,
+    .container2{
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h2{
+        font-size: 1.8rem !important;
+    }
+
+    p{
+        font-size: 1rem !important;
+    }
+
+    /* HEADER */
+    header .container2{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .navbar ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .navbar a{
+        font-size: 0.9rem;
+    }
+
+    /* HERO */
+    .main{
+        height: auto;
+        min-height: 100vh;
+        padding-top: 140px;
+        background-attachment: scroll;
+    }
+
+    .main .content h2{
+        font-size: 1.5rem;
+    }
+
+    .main .content h2 span{
+        font-size: 2.2rem;
+    }
+
+    .animated-text{
+        height: 50px;
+    }
+
+    .animated-text h3{
+        font-size: 2rem;
+        line-height: 50px;
+    }
+
+    @keyframes text-move {
+        0%,10%{
+            margin-top: 0px;
+        }
+
+        20%,30%{
+            margin-top: -50px;
+        }
+
+        40%,50%{
+            margin-top: -100px;
+        }
+
+        60%,70%{
+            margin-top: -150px;
+        }
+
+        75%,80%{
+            margin-top: -100px;
+        }
+
+        85%,90%{
+            margin-top: -50px;
+        }
+
+        100%{
+            margin-top: 0px;
+        }
+    }
+
+    .btn{
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* SOBRE */
+    .about .content{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about .content .col-left,
+    .about .content .col-right{
+        width: 100%;
+    }
+
+    .about .content .col-left .img-card{
+        min-height: 350px;
+    }
+
+    .about .content .col-right .content-title{
+        font-size: 1.6rem;
+    }
+
+    /* WHY CARDS */
+    .why-cards{
+        grid-template-columns: 1fr;
+    }
+
+    /* VIDEOS */
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .video-card{
+        max-width: 100%;
+    }
+
+    .video-placeholder{
+        height: auto;
+    }
+
+    /* CURSOS */
+    .course-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card{
+        max-width: 100%;
+    }
+
+    .course-card img{
+        height: 280px;
+    }
+
+    /* DEPOIMENTOS */
+    .testimonial-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card{
+        max-width: 100%;
+    }
+
+    .testimonial-img img,
+    .img-placeholder{
+        height: auto;
+    }
+
+    /* CONTATO */
+    .contact h2{
+        font-size: 1.6rem;
+    }
+
+    .contact p{
+        font-size: 1rem !important;
+    }
+
+    /* FOOTER */
+    .footer{
+        padding: 1.5rem;
+    }
+
+    .footer .footer-title{
+        font-size: 1.2rem;
+    }
+
+}
