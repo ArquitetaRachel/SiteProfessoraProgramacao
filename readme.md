@@ -128,9 +128,6 @@ O projeto foi preparado para hospedagem via GitHub Pages.
 
 📧 Email: proferachelmaia@gmail.com
 
-📱 WhatsApp:
-https://api.whatsapp.com/send?phone=5522981644840
-
 ---
 
 # ✨ Desenvolvido por
